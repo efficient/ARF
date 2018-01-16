@@ -92,7 +92,7 @@ inline uint64_t time_sum(list<uint64_t> &l)
         copy.push_back(*i);
     }
     sort(copy.begin(),copy.end());
-    for(int i=0;i< copy.size();i++) {
+    for(int i=0;i< (int)copy.size();i++) {
         if(sum + copy[i]<sum) {
             cout<<"OVERFLOW!!"<<endl;
             assert(1==0);
@@ -118,7 +118,7 @@ inline struct stats calculate(vector<uint64_t> v) //sort v
     struct stats st;
     st.mean = v[0.5*v.size()];
     uint64_t sum =0;
-    for(int i=0;i<v.size();i++) {
+    for(int i=0;i<(int)v.size();i++) {
         if(sum+v[i]<sum)
             assert(1==0);
         sum+=v[i];
@@ -127,7 +127,7 @@ inline struct stats calculate(vector<uint64_t> v) //sort v
 
     sum = 0;
 
-    for(int i=0;i<v.size();i++) {
+    for(int i=0;i<(int)v.size();i++) {
         if(sum+v[i]<sum)
             assert(1==0);
         sum+=(v[i]-st.avg)*(v[i]-st.avg);
@@ -173,7 +173,7 @@ inline uint64_t getStddev(list<uint64_t> &l,int QUERIES)
     assert(copy.size() == QUERIES);
 
     uint64_t avg = 0;
-    for(int i=0 ;i<copy.size();i++) {
+    for(int i=0 ;i<(int)copy.size();i++) {
         if(avg+copy[i]<avg) {
             assert(1==0);
         }
@@ -183,7 +183,7 @@ inline uint64_t getStddev(list<uint64_t> &l,int QUERIES)
 
     long double ssum =0;
 
-    for(int i=0 ;i<copy.size();i++) {
+    for(int i=0 ;i<(int)copy.size();i++) {
         if(ssum + copy[i]<ssum) {
             cout<<"OVERFLOW!!"<<endl;
             assert(1==0);
@@ -247,7 +247,7 @@ inline vector<uint64_t> fptime(list<uint64_t> &l,list<uint64_t> &r) {
     cout<<"Adapt size:"<<ad.size();
     cout<<" trunc size:"<<tr.size()<<endl;
     assert(ad.size() >= tr.size());
-    for(int i=0;i<tr.size();i++) {
+    for(int i=0;i<(int)tr.size();i++) {
         ad[i] = ad[i] + tr[i];
     }
     return ad;

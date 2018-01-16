@@ -64,7 +64,7 @@ void ARF::learn_from_tn(uint64 left, uint64 right) {
 
 void ARF::increment_used(node * n, uint64 left, uint64 right, int to_add) {
     node * leaf_node;
-    bool result = navigate_internal(n,left,&leaf_node);
+    navigate_internal(n,left,&leaf_node);
     while( leaf_node->left<=right) {
         // increment used hiar //
         modify_used(leaf_node, to_add);
@@ -107,7 +107,7 @@ void  ARF::print_node(node * n) {
 void ARF::mark_range(node * n, uint64 left, uint64 right, bool value) {
     // precond: called after escalate has been called, ie, the range exists perfectly
     node * leaf_node;
-    bool result = navigate_internal(n,left,&leaf_node);
+    navigate_internal(n,left,&leaf_node);
     while( leaf_node->right<=right) {
         leaf_node->leaf_value = value;
         if(leaf_node->right == this->getDomain() || leaf_node->right == right)

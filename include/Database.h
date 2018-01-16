@@ -7,6 +7,8 @@
 #include "Query.h"
 #include "Util.h"
 
+namespace arf {
+
 class Database {
  public:
     Database();
@@ -19,5 +21,7 @@ class Database {
     std::vector<uint64> keys_;
     std::map<uint64, bool> tree_;
 };
+
+} // namespace arf
 
 #endif // Database_H

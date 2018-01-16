@@ -12,6 +12,8 @@
 #include "Database.h"
 #include "Query.h"
 
+using namespace arf;
+
 static const int kInputSize = 1000000;
 static const int kTrainingSize = 1000000;
 static const int kTestSize = 1000000;

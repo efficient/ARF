@@ -1,5 +1,7 @@
 #include "ARF.h"
 
+using namespace arf;
+
 void ARF::set_used(node * n, int used_value) {
     n->used_counter = used_value;
 }

@@ -16,6 +16,8 @@
 
 using namespace std;
 
+namespace arf {
+
 //typedef unsigned long long uint64;
 typedef uint64_t uint64;
 
@@ -299,5 +301,7 @@ inline uint64_t process_time(list<uint64_t> &l, uint64_t & avg,uint64_t & max, u
     max = avg + stddev;
     return stddev;
 }
+
+} // namespace arf
 
 #endif // Util_H

@@ -9,6 +9,8 @@
 
 using namespace std;
 
+namespace arf {
+
 class ARF {
  public:
     struct node {
@@ -80,5 +82,7 @@ class ARF {
     void evict(node * n);
     void recordNewKeys(uint64 * keys,int num_keys,int strategy);
 };
+
+} // namespace arf
 
 #endif /* ARF_H_ */

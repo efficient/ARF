@@ -3,6 +3,8 @@
 
 #include "Util.h"
 
+namespace arf {
+
 class Query {
  public:
     struct Query_t {
@@ -10,5 +12,7 @@ class Query {
         uint64 right;
     };  // Query_t
 };
+
+} // namespace arf
 
 #endif // Query_H

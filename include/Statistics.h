@@ -5,6 +5,8 @@
 #include "assert.h"
 using namespace std;
 
+namespace arf {
+
 class Statistics {
  public:
     int tp ;
@@ -28,5 +30,7 @@ class Statistics {
 
     void updateRange(int r);
 };
+
+} // namespace arf
 
 #endif /* STATISTICS_H_ */

@@ -1,5 +1,7 @@
 #include "Util.h"
 
+using namespace arf;
+
 vector<vector<double> > parseCsv(vector<int> columns,string file) {
     int dims = columns.size();
     vector<vector<double> > datapoints;

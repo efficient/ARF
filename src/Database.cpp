@@ -1,5 +1,7 @@
 #include "Database.h"
 
+using namespace arf;
+
 Database::Database() { }
 
 Database::Database(std::vector<uint64> input_keys) {

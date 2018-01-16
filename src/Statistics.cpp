@@ -3,6 +3,7 @@
 #include "Util.h"
 
 using namespace std;
+using namespace arf;
 
 Statistics::Statistics() {
     tp = 0;
